@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "b23b9944-ea9d-4aca-90c1-f8f3830f2634",
+		"name": "httptrabfinalweb2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34261231"
+	},
+	"item": [
+		{
+			"name": "login com usuario teste hardcoded",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"teste@gmail.com\",\r\n  \"password\": \"teste123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrando um usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"thiago\",\r\n  \"email\": \"thiagocauapro2@gmail.com\",\r\n  \"password\": \"thiago123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criando um TODO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Minha Tarefa\",\r\n  \"description\": \"Descrição da tarefa\",\r\n  \"dueDate\": \"2024-12-31T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando os TODO",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "criando um TODO pendente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tarefa Pendente\",\r\n  \"description\": \"Esta é uma tarefa pendente.\",\r\n  \"dueDate\": \"2025-01-01T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizando status TODO",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todos/3/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos",
+						"3",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando TODOs pendentes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todos/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criando um TODO atrasado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Tarefa Atrasada\",\r\n  \"description\": \"Esta é uma tarefa que já está atrasada.\",\r\n  \"dueDate\": \"2023-12-01T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando TODOs atrasados",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todos/overdue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos",
+						"overdue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criando uma categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Minha Categoria\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando uma categoria",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compartilhando uma categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sharedWithUserId\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories/2/share",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"2",
+						"share"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando categoria do usuario logado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listando categoria compartilhada com o usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE3MzM5NjIwNzEsImV4cCI6MTczNDU2Njg3MX0.K5vtB0c3Xk4TmYOeDb7hm7DzsxJWAg2MLIxPPqSktx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/sharedcategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"sharedcategories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
